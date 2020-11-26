@@ -7,8 +7,8 @@ module JsonTranslations
 
     module ClassMethods
 
-      def has_translations(attributes:)
-        attributes.each do |attribute|
+      def has_translations(options = {})
+        options.each do |attribute|
           create_methods(attribute)
         end
       end
